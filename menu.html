@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - FoodHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-utensils"></i> FoodHub</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link active">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        Cart <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+        <div class="container">
+            <h1>Our Menu</h1>
+            <p>Discover delicious dishes from our featured restaurants</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="category-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="burger">Burgers</button>
+                <button class="filter-btn" data-category="pasta">Pasta</button>
+                <button class="filter-btn" data-category="dessert">Desserts</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-items">
+        <div class="container">
+            <div class="menu-grid" id="menuGrid">
+
+                <!-- Burger Items -->
+                <div class="menu-item" data-category="burger">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=250&fit=crop" alt="Classic Burger">
+                    <div class="item-info">
+                        <h3>Classic Burger</h3>
+                        <p>Beef patty, lettuce, tomato, onion</p>
+                        <div class="item-price">$9.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 3, "name": "Classic Burger", "price": 9.99, "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burger">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=250&fit=crop" alt="Cheeseburger">
+                    <div class="item-info">
+                        <h3>Cheeseburger</h3>
+                        <p>Beef patty with melted cheese</p>
+                        <div class="item-price">$10.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 4, "name": "Cheeseburger", "price": 10.99, "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burger">
+                    <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&h=250&fit=crop" alt="Bacon Burger">
+                    <div class="item-info">
+                        <h3>Bacon Burger</h3>
+                        <p>Beef patty with crispy bacon and cheese</p>
+                        <div class="item-price">$12.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 13, "name": "Bacon Burger", "price": 12.99, "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burger">
+                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=250&fit=crop" alt="Chicken Burger">
+                    <div class="item-info">
+                        <h3>Chicken Burger</h3>
+                        <p>Grilled chicken breast with fresh vegetables</p>
+                        <div class="item-price">$11.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 14, "name": "Chicken Burger", "price": 11.99, "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pasta Items -->
+                <div class="menu-item" data-category="pasta">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=250&fit=crop" alt="Spaghetti Carbonara">
+                    <div class="item-info">
+                        <h3>Spaghetti Carbonara</h3>
+                        <p>Creamy pasta with bacon and parmesan</p>
+                        <div class="item-price">$13.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 5, "name": "Spaghetti Carbonara", "price": 13.99, "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+               
+
+
+                <div class="menu-item" data-category="pasta">
+                    <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=250&fit=crop" alt="Lasagna">
+                    <div class="item-info">
+                        <h3>Beef Lasagna</h3>
+                        <p>Layered pasta with meat sauce and cheese</p>
+                        <div class="item-price">$15.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 16, "name": "Beef Lasagna", "price": 15.99, "image": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Dessert Items -->
+                <div class="menu-item" data-category="dessert">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=250&fit=crop" alt="Chocolate Cake">
+                    <div class="item-info">
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich chocolate cake with frosting</p>
+                        <div class="item-price">$6.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 9, "name": "Chocolate Cake", "price": 6.99, "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=250&fit=crop" alt="Ice Cream">
+                    <div class="item-info">
+                        <h3>Vanilla Ice Cream</h3>
+                        <p>Creamy vanilla ice cream</p>
+                        <div class="item-price">$4.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 10, "name": "Vanilla Ice Cream", "price": 4.99, "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=250&fit=crop" alt="Tiramisu">
+                    <div class="item-info">
+                        <h3>Tiramisu</h3>
+                        <p>Classic Italian dessert with coffee and mascarpone</p>
+                        <div class="item-price">$7.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 19, "name": "Tiramisu", "price": 7.99, "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=250&fit=crop" alt="Cheesecake">
+                    <div class="item-info">
+                        <h3>New York Cheesecake</h3>
+                        <p>Creamy cheesecake with berry compote</p>
+                        <div class="item-price">$8.99</div>
+                        <button class="btn btn-primary add-to-cart" data-item='{"id": 20, "name": "New York Cheesecake", "price": 8.99, "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=250&fit=crop"}'>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-utensils"></i> FoodHub</h3>
+                    <p>Your favorite food, delivered fast and fresh.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 (555) 123-4567</p>
+                    <p>📧 info@foodhub.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FoodHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
